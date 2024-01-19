@@ -1,0 +1,131 @@
+*{
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$orange : #e38626;
+$green-light: #016773;
+$green-dark : #034041;
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+}
+
+.card{
+    display: grid;
+    width: 820px;
+    height: 460px;
+    grid-template-columns: auto auto auto;
+    border-radius: 12px;
+    padding: 12px;
+    border: none;
+
+    section{
+        width: 100%;
+        padding: 28px;
+        display: grid;
+        gap: 24px;
+        grid-template-areas: 
+        "icons icons"
+        "title title"
+        "txt    txt "
+        "button button";
+        
+
+        div{
+            grid-area: icons;
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 80px;
+
+            div{
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 5px;
+                left: -10px;
+                background-color: #2020203d;
+                border-radius: 50%;
+            }
+
+            figure{
+                width: 60px;
+                height: 30px;
+                z-index: 1;
+                margin-left: 8px;
+
+                img{
+                    z-index: 1;
+                    width: 100%;
+                }
+            }
+        }
+
+        h2{
+            grid-area: title;
+            font-size: 2.5rem;
+            color: white;
+            font-family: 'Teko', sans-serif;
+            font-weight: 500;
+        }
+
+        p{
+            grid-area: txt;
+            display: flex;
+            justify-content: center;
+            width: 88%;
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 48px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 400;
+            line-height: 2.2rem;
+        }
+
+        button{
+            grid-area: button;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            background-color: white;
+            padding: 12px 0px;
+            border-radius: 24px;
+            border: none;
+            width: 70%;
+            font-weight: bold;
+        }
+    }
+
+    .left{
+        background-color: $orange;
+        border-radius: 12px 0 0 12px;
+
+        button{
+            color: $orange;
+        }
+    }
+
+    .middle{
+        background-color: $green-light;
+
+        button{
+            color: $green-light;
+        }
+    }
+
+    .right{
+        background-color: $green-dark;
+        border-radius: 0 12px 12px 0;
+
+        button{
+            color: $green-dark;
+        }
+    }
+}
